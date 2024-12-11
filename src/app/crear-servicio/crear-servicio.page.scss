@@ -1,0 +1,270 @@
+*{
+  align-items: center;
+  text-align: center; /* Asegúrate de que el contenedor ocupa toda la altura */
+}
+
+h1{
+  font-family: "SF UI Display";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  color: var(--Light-Text-Color, #1B1E28);
+
+
+}
+
+h2 {
+  margin-top: 8%;
+  color: var(--Light-Text-Color, #1B1E28);
+  text-align: center;
+  font-family: "SF UI Display";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 34px; /* 130.769% */
+}
+header{
+  background-color: #2CA876;
+}
+
+.titulo {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #212121; /* Texto primario */
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas flexibles */
+  gap: 20px; /* Espacio entre categorías */
+  margin-top: 20px;
+  justify-items: center; /* Centra horizontalmente cada categoría */
+}
+
+.category-container {
+  background: #ffffff; /* Fondo blanco */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 110px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Elevación inicial */
+  cursor: pointer;
+  text-align: center;
+}
+
+.category-container.selected {
+  border: 2px solid #ff7029; /* Color principal para la selección */
+  transform: translateY(-5px); /* Efecto de flotación al seleccionar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Mayor elevación */
+}
+
+
+
+.category-container:hover img {
+  transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
+.category-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #424242; /* Texto secundario */
+}
+
+
+
+
+.footer-btn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.btn {
+  width: 90%;
+  max-width: 307px;
+  height: 56px;
+  border-radius: 8px;
+  background: #FF7029; /* Color principal */
+  color: white; /* Color del texto */
+  font-family: "SF UI Display", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Elevación inicial */
+}
+
+.btn:hover {
+  background: #e66321; /* Color más oscuro al pasar el mouse */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Aumenta la elevación */
+  transform: translateY(-2px); /* Efecto de flotación */
+}
+
+.btn:active {
+  background: #cc5b1e; /* Color más oscuro al hacer clic */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Reducir la elevación */
+  transform: translateY(0); /* Elimina el efecto de flotación */
+}
+
+.btn:disabled {
+  background: #ffb899; /* Color atenuado para estados deshabilitados */
+  cursor: not-allowed;
+  box-shadow: none; /* Sin elevación */
+}
+
+
+.story-input-container {
+  display: flex;
+
+  height: 70vh; /* Ocupa toda la pantalla verticalmente */
+}
+
+.story-textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  font-size: 36px; /* Tamaño de fuente grande */
+  font-weight: bold;
+  text-align: center;
+  outline: none;
+  color: #1B1E28; /* Ajuste de color de texto */
+  resize: none;
+  line-height: 1.2;
+  overflow: hidden; /* Oculta los bordes de desplazamiento */
+}
+
+
+::placeholder {
+  color: #1b1e285e; // Placeholder transparente
+  font-size: 36px;
+  text-align: center;
+}
+
+
+.custom-take-photo-btn {
+  width: 130px;
+  height: 130px;
+  border: 3px dashed #7D848D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Centrar el botón horizontalmente */
+  border-radius: 12px;
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: 10%;
+}
+
+.contenedorimg {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
+  gap: 5px; /* Espacio entre los elementos */
+  align-items: center;
+  justify-items: center; /* Centra horizontalmente los elementos dentro de cada celda */
+}
+
+.image-container {
+  max-height: 130px;
+  width: 100%; /* Ajusta el ancho de la imagen */
+  max-width: 150px; /* Controla el tamaño máximo de la imagen, puedes ajustar según sea necesario */
+  position: relative;
+}
+
+.preview-image {
+  width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+
+
+.icono-boton {
+  width: 60px;
+  height: 60px;
+}
+
+.custom-take-photo-btn:hover {
+  background-color: #f0f1f2;
+}
+
+
+.confirmacion {
+  background-color: #2CA876; /* Color de fondo */
+  height: 100vh; /* Ocupar toda la pantalla */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centrar contenido vertical y horizontalmente */
+  text-align: center;
+  padding: 20px; /* Espaciado interno */
+  box-sizing: border-box; /* Incluir padding en la altura */
+}
+
+.confirmacion-content {
+  max-width: 400px; /* Ancho máximo para centrar el contenido */
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Elementos en columna */
+  justify-content: center; /* Centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+  gap: 20px; /* Espaciado entre elementos */
+}
+
+.confirmacion-img {
+  width: 120px; /* Tamaño de la imagen */
+  height: auto; /* Mantener proporciones */
+}
+
+.confirmacion-title {
+  font-family: "Geliat-ExtraBold", sans-serif;
+  color: #FFF; /* Texto blanco */
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.confirmacion-text {
+  color: #DFF5EA; /* Color más claro para el texto */
+  font-size: 18px;
+  line-height: 1.6; /* Mejora la legibilidad */
+}
+
+.footer-btn {
+  width: 100%; /* Asegura que ocupe todo el ancho del contenido */
+  display: flex;
+  justify-content: center; /* Centrar el botón */
+}
+
+.boton-inicio {
+  width: 90%; /* Botón más amplio */
+  max-width: 307px;
+  height: 50px; /* Altura del botón */
+  border-radius: 25px; /* Botón más redondeado */
+  border: 2px solid #FFF; /* Borde blanco */
+  background-color: transparent; /* Fondo transparente */
+  color: #FFF; /* Texto blanco */
+  font-family: "SF UI Display", sans-serif;
+  font-size: 18px; /* Fuente más grande */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+.boton-inicio:hover {
+  background-color: #FFF; /* Fondo blanco al pasar el mouse */
+  color: #2CA876; /* Texto verde */
+  transform: scale(1.05); /* Aumentar ligeramente el tamaño */
+}
+
+.boton-inicio:active {
+  transform: scale(0.95); /* Reducir ligeramente el tamaño al hacer clic */
+}

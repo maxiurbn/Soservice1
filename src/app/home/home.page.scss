@@ -1,0 +1,317 @@
+.cabezera {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between; /* Asegura que los elementos estén bien distribuidos */
+  margin-top: -40px;
+}
+
+.comuna {
+  border-radius: 38.5px;
+  color: #1B1E28;
+  font-family: "SF UI Display";
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 10px;
+  background: #fff;
+  width: 100px; 
+  flex-shrink: 0; /* Impide que el select se reduzca más allá del tamaño establecido */
+  padding-left: 40px;
+}
+
+.cabezera h1 {
+  flex-grow: 1; /* Permite que el h1 ocupe todo el espacio disponible */
+  text-align: center; /* Centra el h1 en su espacio */
+  margin: 0; /* Elimina márgenes innecesarios */
+}
+.profile-photo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;  /* Ajusta el tamaño */
+  height: 32px;
+  border-radius: 50%;  /* Hace la imagen redonda */
+  object-fit: cover;  /* Asegura que la imagen no se distorsione */
+  margin-top: -3px;
+
+}
+
+.tarearapida {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 11px;
+  background: #FF7029; /* Color principal de tu app */
+  height: 160px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+  justify-content: center; /* Centra el contenido dentro del div */
+}
+.tarearapida button {
+  width: 30%;
+  height: 50px;
+  border-radius: 20px;
+  border: 2px solid #606060;
+  background: #FFDB29;
+
+  color: #4F4F4F;
+  text-align: center;
+  font-family: "SF UI Display";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 34px; /* 200% */
+}
+
+.tarearapida button:hover {
+  background-color: #FFC107; /* Tonalidad más cálida en hover */
+  transform: translateY(-2px);
+  
+}
+
+
+h3 {
+  font-family: Geliat-ExtraBold;
+  color: #FFF;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 28px; /* 95.455% */
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px; /* Espaciado entre tarjetas */
+  padding: 16px;
+}
+
+.custom-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra más suave */  
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición más suave */
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  padding: 1%;
+}
+
+.custom-card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.card-description {
+  color: #1B1E28;
+  font-family: "SF UI Display", sans-serif;
+  font-size: 9.231px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 9.231px; /* 100% */
+  margin: 4px 0 0 0;
+  text-align: center;
+  align-items: center; /* Centrado vertical */
+  justify-content: center;
+
+}
+
+
+/* Apunta al <input> dentro de ion-searchbar */
+/* Apuntar al input dentro de ion-searchbar */
+:host ::ng-deep .busqueda .searchbar-input {
+  width: 100% !important;
+  height: 38px !important;
+  border-radius: 20px !important;
+  border: 2px solid #606060 !important;
+  background: #FFF !important;
+  color: rgba(27, 30, 40, 0.60) !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
+}
+
+/* Apuntar al contenedor de la barra de búsqueda */
+:host ::ng-deep .busqueda .searchbar-inner {
+  border-radius: 20px !important;
+  border: 2px solid #606060 !important;
+}
+
+/* Apuntar a los iconos dentro de la búsqueda si los necesitas */
+:host ::ng-deep .busqueda .searchbar-icon {
+  color: rgba(27, 30, 40, 0.60) !important;
+}
+
+
+
+h1{
+  color: #FF7029;
+  font-family: "League Spartan";
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.63px;
+  text-align: center;
+  
+}
+h2{
+  color: var(--Light-Text-Color, #1B1E28);
+  font-size: 19px;
+  font-family: "SF UI Display";
+
+  font-style: normal;
+  font-weight: 600;
+  line-height: 34px; /* 178.947% */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #f8f9fa;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.15); /* Sombra en el borde superior */
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.ion-button {
+  flex: 1;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  --background: #fff;
+  font-size: 12px;
+  color: var(--Light-Sub-Text-Color, #7D848D);
+  border: none;
+  text-decoration: none; /* Elimina la línea debajo del texto */
+}
+.texto{
+  font-family: "SF UI Display", sans-serif;
+  font-size: 12px;
+
+}
+
+/* Selecciona correctamente los íconos de Ionic */
+ion-icon {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 4px; /* Añade un poco de espacio entre el ícono y el texto */
+}
+.input-field {
+  width: 100%;
+  max-width: 335px; /* Ajusta el ancho máximo */
+  height: 56px;
+  border-radius: 14px;
+  background-color: #F7F7F9;
+  padding: 10px;
+  margin-bottom: 15px;
+  --padding-start: 10px;
+  --padding-end: 10px;
+  --color: #1B1E28;
+  color: #1B1E28;
+}
+.input-field:focus {
+  width: 100%;
+  max-width: 335px; /* Ajusta el ancho máximo */
+  height: 56px;
+  border-radius: 14px;
+  background-color: #F7F7F9;
+  padding: 10px;
+  margin-bottom: 15px;
+  --padding-start: 10px;
+  --padding-end: 10px;
+  --color: #1B1E28;
+  color: #1B1E28;
+}
+
+.crear {
+  bottom: 100px;
+  position: fixed;
+  right: 20px; /* Ajusta según sea necesario */
+  z-index: 10; /* Asegura que se quede encima del footer */
+  background-color: #FF7029; /* Color principal (puedes ajustarlo) */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Hace que el botón sea redondo */
+  width: 56px; /* Tamaño adecuado para el botón */
+  height: 56px; /* Tamaño adecuado para el botón */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para el efecto Material Design */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, transform 0.2s; /* Transición suave */
+}
+
+.crear:hover {
+  background-color: #FF5C33; /* Cambio de color al pasar el mouse */
+  transform: scale(1.1); /* Efecto de ampliación al pasar el mouse */
+}
+
+.crear:active {
+  transform: scale(1); /* Reduce el tamaño al hacer clic */
+}
+
+
+.cabezera {
+  position: relative;
+}
+

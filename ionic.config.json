@@ -1,0 +1,8 @@
+{
+  "name": "soservice ng",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,30 @@
+.back-button-container {
+    display: flex; /* Habilita Flexbox */
+    align-items: center; /* Alinea el contenido verticalmente al centro */
+    gap: 10px; /* Espaciado entre el botón y el h2 */
+    margin: 20px; /* Espaciado exterior opcional */
+  }
+  
+  .back-button {
+    margin: 0; /* Elimina márgenes innecesarios en el botón */
+    padding: 0; /* Opcional: ajusta el espacio del botón */
+  }
+  
+  h2 {
+    color: var(--Light-Text-Color, #1B1E28);
+    font-size: 19px;
+    font-family: "SF UI Display";
+    font-style: normal;
+    font-weight: 600;
+    line-height: 34px; /* Altura de línea */
+    margin: 0; /* Asegúrate de que no haya margen adicional */
+    flex: 1; /* Haz que el `h2` ocupe el espacio restante si es necesario */
+  }
+  
+  ion-button {
+    --background: #FF7029;
+    --color: #fff;
+    --border-radius: 8px;
+    --box-shadow: 0px 4px 8px rgba(255, 112, 41, 0.3);
+    font-size: 16px;
+  }

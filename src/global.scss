@@ -1,0 +1,111 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+@import 'swiper/swiper-bundle.css';
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+@font-face {
+  font-family: Geliat-ExtraBold;
+  src: url(./assets/fonts/Geliat-ExtraBold.otf);
+}
+
+  
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Cambiado para alinear desde el inicio */
+    align-items: center;
+    overflow: auto;
+    margin-bottom: 60px;
+  }
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #f8f9fa;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.15); /* Sombra en el borde superior */
+  }
+  
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+  }
+  
+.ion-button {
+    flex: 1;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    --background: #fff;
+    font-size: 12px;
+    color: var(--Light-Sub-Text-Color, #7D848D);
+    border: none;
+    text-decoration: none; /* Elimina la línea debajo del texto */
+  }
+.texto{
+    font-family: "SF UI Display", sans-serif;
+    font-size: 12px;
+  
+  }
+
+
+
+  .icono {
+    font-size: 22px; /* Tamaño del ícono */
+}
+
+
+
+.btnback {
+  --background: #FF7029;
+  --color: #fff;
+  --border-radius: 8px;
+  --box-shadow: 0px 4px 8px rgba(255, 112, 41, 0.3);
+  font-size: 16px;
+}
+
+.btnbackcontainer {
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    left: 10px;
+}

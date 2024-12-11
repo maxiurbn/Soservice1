@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goToAdmin()">
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Gestión de Perfiles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let user of users" class="user-item">
+      <ion-avatar slot="start">
+        <img [src]="user.profilePhotoUrl ? user.profilePhotoUrl : 'assets/default.jpg'" alt="Foto de perfil" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ user.name }} {{ user.lastName }}</h2>
+        <p><strong>Comuna:</strong> {{ user.comunas }}</p>
+        <p><strong>Rut:</strong> {{ user.rut }}</p>
+        <p><strong>Teléfono:</strong> {{ user.phone }}</p>
+        <p><strong>Apellido Materno:</strong> {{ user.lastnamef }}</p>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button color="danger" fill="clear" (click)="confirmDelete(user)">
+          Eliminar
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+</ion-content>

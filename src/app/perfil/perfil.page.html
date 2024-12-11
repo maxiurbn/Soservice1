@@ -1,0 +1,55 @@
+<div class="back-button-container">
+  <ion-button fill="clear" (click)="goBack()" class="back-button">
+    <ion-icon name="arrow-back"></ion-icon>
+  </ion-button>
+</div>
+
+<ion-content>
+  <div class="profile-container">
+    <div class="profile-photo-container">
+      <img [src]="profilePhotoUrl" alt="Foto de perfil" />
+    </div>
+    <h2>{{name}}</h2><p>{{ rating | number: '1.1-2' }} ⭐</p>
+  </div>
+ 
+  
+<hr>
+  <div class="options-container">
+    <div class="option-item" (click)="editProfile()" >
+      <ion-icon name="create-outline"></ion-icon>
+      <p>Editar Perfil</p>
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+    </div>
+    
+    <div class="option-item" (click)="goToHistorial()">
+      <ion-icon name="time-outline"></ion-icon>
+      <p>Ver Historial</p>
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+    </div>
+
+    <div class="option-item" (click)="goToPremium()">
+      <ion-icon name="cash-outline"></ion-icon>
+      <p>Premium</p>
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+    </div>
+
+    <ng-container *ngIf="isAdmin | async">
+    <div class="option-item">
+      <ion-icon name="people-circle-outline"></ion-icon>
+      <button (click)="navigateToAdmin()">Ir a Administración</button>
+    <ion-icon name="chevron-forward-outline"></ion-icon>
+    </div>
+    </ng-container>
+
+    <div class="option-item logout" (click)="logout()">
+      <ion-icon name="log-out-outline"></ion-icon>
+      <p>Cerrar Sesión</p>
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+
+      
+      
+    
+  </div>
+</div>
+</ion-content>
+

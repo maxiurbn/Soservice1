@@ -1,0 +1,59 @@
+<div class="btnbackcontainer">
+  <ion-button fill="clear" (click)="goBack()" class="btnback">
+    <ion-icon class="icono" name="arrow-back"></ion-icon>
+  </ion-button>
+</div>
+<ion-content *ngIf="trabajo" style="position: relative;">
+  <img *ngIf="trabajo.imageUrl" [src]="trabajo.imageUrl" alt="Imagen del trabajo" />
+  <div class="chip-container">
+    <div class="chip">{{ trabajo.timestamp | date: 'short' }}</div>
+    <div class="chip">{{ trabajo.categoria }}</div>
+  </div>
+ 
+  
+  
+   
+    
+  
+    <div class="contenido" style="margin-top: -50px;">
+      <h2>{{ trabajo.descripcionTrabajo }}</h2>
+      <div class="usuario">
+        <img *ngIf="creadorProfilePhotoUrl" [src]="creadorProfilePhotoUrl" alt="Foto de perfil del creador" />
+        <h5>{{nombreCreador }}</h5>{{ rating }}⭐
+      </div>
+      <h4 class="requeimientos">Requerimientos</h4>
+      <p>{{trabajo.requerimientos}}</p>
+
+      <div class="carousel">
+        <div class="carousel-item" *ngIf="trabajo?.imageUrl">
+          <ion-img [src]="trabajo.imageUrl"></ion-img>
+        </div>
+        <div class="carousel-item" *ngIf="trabajo?.imageUrl2">
+          <ion-img [src]="trabajo.imageUrl2"></ion-img>
+        </div>
+        <div class="carousel-item" *ngIf="trabajo?.imageUrl3">
+          <ion-img [src]="trabajo.imageUrl3"></ion-img>
+        </div>
+      </div>
+      
+    </div>
+    
+    
+    
+    
+
+  
+  
+</ion-content>
+
+<ion-footer>
+  <h2>{{trabajo.pago}}</h2>
+  <button
+  class="contactar"
+  (click)="contactarCreador(trabajo.creadorId)"
+  [disabled]="esCreador"
+  *ngIf="!esCreador"
+>
+  Contactar
+</button>
+</ion-footer>

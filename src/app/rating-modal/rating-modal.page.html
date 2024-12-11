@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Valorar Trabajador</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="auto">
+        <ion-button *ngFor="let star of [1, 2, 3, 4, 5]" 
+                    [color]="star <= selectedRating ? 'warning' : 'medium'" 
+                    (click)="selectRating(star)">
+          ★
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-footer>
+    <ion-button expand="block" color="primary" (click)="submitRating()">Enviar Valoración</ion-button>
+  </ion-footer>
+</ion-content>

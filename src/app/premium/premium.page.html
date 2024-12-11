@@ -1,0 +1,51 @@
+<div class="back-button-container">
+  <ion-button fill="clear" (click)="goBack()" class="back-button">
+    <ion-icon name="arrow-back"></ion-icon>
+  </ion-button>
+</div>
+<ion-content>
+  <ion-grid>
+    <!-- Mensaje introductorio -->
+    <ion-row>
+      <ion-col size="12">
+        <div style="text-align: center; margin: 20px;">
+          <h2>¡Lleva tu experiencia al siguiente nivel!</h2>
+          <p style="font-size: 16px; color: #666;">
+            Cambiarte a <strong>Premium</strong> desbloquea todas las funciones de nuestra aplicación,
+            brindándote acceso ilimitado a herramientas y beneficios que te permitirán
+            aprovecharla al máximo. No te quedes limitado, descubre todo su esplendor con Premium.
+          </p>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <!-- Plan Premium -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-header>
+            <h2>$2.000CLP/año</h2>
+            <ion-badge color="tertiary">80% DTO</ion-badge>
+            <p>El paquete perfecto para crear todos los trabajos que desees</p>
+            <ion-card-title>Premium</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              <ion-item lines="none">
+                <ion-icon name="checkmark-circle" slot="start" color="success"></ion-icon>
+                <ion-label>Creacion de trabajos ilimitados.</ion-label>
+              </ion-item>
+              <ion-item lines="none">
+                <ion-icon name="checkmark-circle" slot="start" color="success"></ion-icon>
+                <ion-label>Tus trabajos se destacaran para que sea más visible.</ion-label>
+              </ion-item>
+              
+            </ion-list>
+            <ion-button expand="block" class="boton">Elegir plan</ion-button>
+            <p style="text-align: center;">$6000/año al renovar</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

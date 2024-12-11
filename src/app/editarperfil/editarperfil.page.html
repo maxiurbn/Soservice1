@@ -1,0 +1,56 @@
+<div class="btnbackcontainer">
+  <ion-button fill="clear" (click)="goBack()" class="btnback">
+    <ion-icon class="icono" name="arrow-back"></ion-icon>
+  </ion-button>
+</div>
+
+<ion-content>
+  <!-- Contenedor de foto de perfil -->
+  <div class="profile-photo-container">
+    <img [src]="profilePhotoUrl" alt="Foto de perfil" (click)="changeProfilePicture()"/>
+    <div class="edit-icon" (click)="changeProfilePicture()">
+      <ion-icon name="create-outline"></ion-icon>
+    </div>
+  </div>
+
+  <!-- Formulario de edición -->
+  <div class="form-container">
+    <ion-item class="custom-item">
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="name" placeholder="Tu nombre"></ion-input>
+    </ion-item>
+
+    <ion-item class="custom-item">
+      <ion-label position="floating">Correo electrónico</ion-label>
+      <ion-input [(ngModel)]="email" placeholder="Tu correo" readonly></ion-input>
+    </ion-item>
+
+    <ion-item class="custom-item">
+      <ion-label position="floating">Número de teléfono</ion-label>
+      <ion-input [(ngModel)]="phone" placeholder="Tu teléfono"></ion-input>
+    </ion-item>
+
+    <ion-item class="custom-item">
+      <ion-label position="floating">Descripción Profesional</ion-label>
+      <ion-input [(ngModel)]="skills" placeholder="Tu Descripcion"></ion-input>
+    </ion-item>
+
+    <ion-item class="custom-item">
+      <ion-label>Comuna</ion-label>
+      <ion-select [(ngModel)]="comuna" (ionChange)="cambiarComuna($event)" placeholder="Selecciona tu comuna" class="comuna">
+        <ion-select-option *ngFor="let comunaDisponible of comunasDisponibles" [value]="comunaDisponible">
+          {{ comunaDisponible }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+  </div>
+
+  <!-- Botón de actualización -->
+  <div class="button-container">
+    <ion-button (click)="updateUserProfile()" expand="block">
+      <ion-icon slot="start" name="checkmark-outline"></ion-icon>
+      Actualizar Perfil
+    </ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="toolbar-content">
+      <ion-icon name="arrow-back" (click)="goBack()" class="back-icon"></ion-icon>
+      <img [src]="otherUserProfilePhotoUrl || 'assets/default-profile.png'" alt="" class="foto-perfil">
+      <ion-title>{{ otherUserName || 'Chat' }}</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<div class="fondo">
+<ion-content class="content-transparent">
+  <div class="chat-container">
+    <ul class="message-list">
+      <li *ngFor="let message of messages" 
+          [ngClass]="{'sent-message': message.senderId === currentUserId, 
+                      'received-message': message.senderId !== currentUserId}">
+        <div class="message">
+          <p class="message-text">{{ message.text }}</p>
+          <span class="message-timestamp">{{ message.timestamp | date:'short' }}</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</ion-content>
+
+<footer>
+  <div class="chat-input-container">
+    <div class="input-bubble">
+      <input 
+        type="text" 
+        [(ngModel)]="newMessage" 
+        class="chat-input" 
+        placeholder="Escribe un mensaje..." 
+      />
+    </div>
+    <div class="send-bubble">
+      <button 
+        (click)="sendMessage()" 
+        class="send-button" 
+        [disabled]="!newMessage.trim()">
+        <ion-icon name="send"></ion-icon >
+      </button>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+
+
+
+

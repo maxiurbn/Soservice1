@@ -1,0 +1,82 @@
+/* Estilo general para el encabezado */
+ion-header {
+    ion-toolbar {
+      background: var(--ion-color-primary);
+      color: #FF7029;
+  
+      ion-title {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+  
+      ion-buttons {
+        ion-button {
+          --color: #FF7029;
+  
+          ion-icon {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Fondo del contenido */
+  ion-content {
+    --background: #f9f9f9;
+  
+    /* Estilo de los usuarios */
+    .user-item {
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: white;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+      /* Avatar */
+      ion-avatar {
+        img {
+          border-radius: 50%;
+          border: 2px solid var(--ion-color-primary);
+          width: 60px;
+          height: 60px;
+        }
+      }
+  
+      /* Etiquetas */
+      ion-label {
+        h2 {
+          font-size: 1rem;
+          color: var(--ion-color-primary);
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+  
+        p {
+          font-size: 0.9rem;
+          color: #666;
+          margin: 5px 0;
+        }
+  
+        p strong {
+          color: #333;
+        }
+      }
+  
+      /* Botones de acción */
+      ion-buttons {
+        ion-button {
+          --color: var(--ion-color-danger);
+          font-size: 0.9rem;
+  
+          &[fill="clear"] {
+            --background: none;
+            text-transform: uppercase;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  

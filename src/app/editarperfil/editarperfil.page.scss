@@ -1,0 +1,74 @@
+/* Contenedor del botón "Atrás" */
+.back-button-container {
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  left: 10px;
+}
+
+/* Estilo de la foto de perfil */
+.profile-photo-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.profile-photo-container img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* Icono de edición dentro de un círculo */
+.edit-icon {
+  position: absolute;
+  bottom: 0;
+  right: 40%;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #FF7029;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.edit-icon ion-icon {
+  font-size: 14px;
+  color: #fff;
+}
+
+/* Contenedor del formulario */
+.form-container {
+  padding: 20px;
+}
+
+/* Estilo para los ion-items */
+.custom-item {
+  --background: #fff;
+  --border-color: #FF7029;
+  --color-focused: #FF7029;
+  --placeholder-color: #7D848D;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Botón de actualización */
+.button-container {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+ion-button {
+  --background: #FF7029;
+  --color: #fff;
+  --border-radius: 8px;
+  --box-shadow: 0px 4px 8px rgba(255, 112, 41, 0.3);
+  font-size: 16px;
+}

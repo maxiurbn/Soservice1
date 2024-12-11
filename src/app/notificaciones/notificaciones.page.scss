@@ -1,0 +1,122 @@
+ion-header {
+  --background: #3880ff; /* Color de fondo del header */
+  color: white;
+}
+
+ion-toolbar {
+  --background: #3880ff; /* Mantener coherencia en el header */
+}
+
+ion-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Contenedor general */
+ion-content {
+  --background: #f8f9fa; /* Fondo claro para la lista */
+  padding: 16px;
+}
+
+ion-list {
+  margin: 0;
+  padding: 0;
+}
+
+ion-item {
+  border-radius: 12px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 8px 0;
+  background-color: white;
+  --padding-start: 16px;
+  --padding-end: 16px;
+}
+
+ion-label h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+ion-label p {
+  font-size: 0.9rem;
+  color: #6c757d; /* Gris tenue para los timestamps */
+  margin-top: 4px;
+}
+
+ion-badge {
+  font-size: 0.85rem;
+  border-radius: 8px;
+}
+
+/* Estilos de estado */
+ion-badge[color="success"] {
+  background-color: #28a745;
+  color: white;
+}
+
+ion-badge[color="danger"] {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Botones estilizados */
+ion-button {
+  margin-left: 8px;
+  --border-radius: 8px;
+}
+
+ion-button[color="primary"] {
+  --background: #007bff;
+  --background-hover: #0056b3;
+  --background-activated: #003f7f;
+  color: white;
+}
+
+ion-button[color="light"] {
+  --background: #f8f9fa;
+  --background-hover: #e2e6ea;
+  --background-activated: #dae0e5;
+  color: #495057;
+}
+.botones-accion {
+  margin-top: 12px; /* Espaciado hacia arriba */
+}
+
+ion-button {
+  font-size: 1rem; /* Tamaño de fuente */
+  font-weight: bold; /* Fuente más visible */
+  --border-radius: 12px; /* Bordes redondeados */
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+}
+
+ion-button[color="success"] {
+  --background: #28a745; /* Verde intenso */
+  --background-hover: #218838; /* Verde oscuro al pasar el ratón */
+  --color: white;
+}
+
+ion-button[color="danger"] {
+  --background: #dc3545; /* Rojo intenso */
+  --background-hover: #c82333; /* Rojo oscuro al pasar el ratón */
+  --color: white;
+}
+.titulo{
+  color: var(--Light-Text-Color, #1B1E28);
+  text-align: center;
+  font-family: "SF UI Display";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 34px; /* 200% */
+  margin-top: 22px;
+  }
+
+.titulo2 {
+  display: flex;               /* Convierte el contenedor en un flexbox */
+  align-items: center;         /* Centra verticalmente los elementos */
+  justify-content: space-between; /* Coloca el h2 a la izquierda y el botón al extremo derecho */
+  padding: 0 16px;             /* Opcional: Añade espacio interno al contenedor */
+}

@@ -1,0 +1,143 @@
+/* Botón de retroceso */
+.back-button-container {
+  position: absolute;
+  z-index: 10;
+  top: 10px; /* Posición original */
+  left: 10px; /* Posición original */
+}
+
+ion-button.back-button {
+  --background: #FF7029;
+  --color: #fff;
+  --border-radius: 8px;
+  --box-shadow: 0px 4px 8px rgba(255, 112, 41, 0.3);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+ion-button.back-button:hover {
+  --box-shadow: 0px 5px 10px rgba(255, 112, 41, 0.3); /* Elevación en hover */
+  transform: translateY(-2px); /* Efecto de flotación */
+}
+
+ion-button.back-button:active {
+  --box-shadow: 0px 2px 4px rgba(255, 112, 41, 0.1); /* Menor elevación en active */
+  transform: translateY(0); /* Sin flotación */
+}
+
+
+/* Contenedor principal del perfil */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 72px; /* Mayor espacio según Material Design */
+}
+
+/* Contenedor de la foto de perfil */
+.profile-photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.profile-photo-container img {
+  width: 96px; /* Tamaño más grande para mejor interacción */
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombras Material */
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.profile-photo-container img:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* Elevación en hover */
+  transform: scale(1.05); /* Ligero agrandamiento */
+}
+
+/* Estilo del título */
+h2 {
+  color: #1B1E28;
+  font-family: "Roboto", sans-serif; /* Material Design recomienda Roboto */
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 8px;
+  text-align: center;
+  letter-spacing: 0.15px;
+}
+
+/* Contenedor de opciones */
+.options-container {
+  margin-top: 32px;
+  padding: 0 16px; /* Espaciado acorde a Material Design */
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border: 1px solid #E0E0E0;
+  border-radius: 12px; /* Esquinas redondeadas Material */
+  margin-bottom: 16px;
+  cursor: pointer;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); /* Elevación base */
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.option-item:hover {
+  background: #F5F5F5; /* Color de fondo en hover */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Mayor elevación */
+  transform: translateY(-2px);
+}
+
+.option-item:active {
+  background: #E0E0E0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Menor elevación */
+  transform: translateY(0);
+}
+
+/* Iconos dentro de las opciones */
+.option-item ion-icon:first-child {
+  color: #FF7029;
+  font-size: 24px; /* Tamaño de iconos según Material Design */
+}
+
+.option-item p {
+  flex-grow: 1;
+  margin: 0 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #1B1E28;
+  letter-spacing: 0.5px;
+}
+.option-item button {
+  flex-grow: 1;
+  margin: 0 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #1B1E28;
+  letter-spacing: 0.5px;
+  text-align: start;
+}
+
+.option-item ion-icon:last-child {
+  color: #7D848D;
+  font-size: 24px;
+}
+
+/* Estilo especial para la opción de cerrar sesión */
+.logout ion-icon:first-child {
+  color: #FF4B4B;
+}
+
+hr{
+  width: 80%;
+  height: 2px;
+  background: #7D848D;
+}

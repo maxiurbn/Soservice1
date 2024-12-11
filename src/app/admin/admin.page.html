@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Admin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card (click)="goToadminTrabajos()">
+          <ion-card-header>
+            <ion-card-title>Trabajos Posteados</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <h2>{{ trabajosCount }}</h2>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card (click)="goToadminUsuarios()">
+          <ion-card-header>
+            <ion-card-title>Usuarios Registrados</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <h2>{{ usersCount }}</h2>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

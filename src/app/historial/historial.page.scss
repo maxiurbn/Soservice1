@@ -1,0 +1,131 @@
+/* Encabezado */
+ion-header {
+    ion-toolbar {
+      background: linear-gradient(135deg, var(--ion-color-primary), var(--ion-color-tertiary));
+      color:  #FF7029;
+  
+      ion-title {
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+  
+      ion-buttons {
+        ion-button {
+          --color:  #FF7029;
+  
+          ion-icon {
+            font-size: 1.8rem;
+            color:  #FF7029;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Fondo del contenido */
+  ion-content {
+    --background: #f2f2f7;
+  
+    /* Estilo de tabs */
+    ion-tab-bar {
+      background: white;
+      border-top: 1px solid #e0e0e0;
+  
+      ion-tab-button {
+        --color: #7a7a7a;
+        --color-selected: var(--ion-color-primary);
+        font-weight: bold;
+        text-transform: capitalize;
+  
+        ion-label {
+          font-size: 1rem;
+        }
+      }
+    }
+  
+    /* Lista de trabajos */
+    ion-list {
+      padding: 15px;
+  
+      .trabajo-item {
+        background: white;
+        border-radius: 12px;
+        padding: 15px;
+        margin: 15px 0;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        }
+  
+        ion-thumbnail {
+          img {
+            border-radius: 8px;
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+          }
+        }
+  
+        ion-label {
+          margin-left: 10px;
+  
+          h2 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--ion-color-primary);
+            margin: 0 0 5px 0;
+          }
+  
+          p {
+            font-size: 0.95rem;
+            color: #636363;
+            margin: 2px 0;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Animación y estilo general */
+  ion-item {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 8px 0;
+    padding: 10px;
+  
+    transition: background 0.3s ease;
+  
+    &:hover {
+      background: var(--ion-color-light);
+    }
+  }
+  
+  /* Botones */
+  ion-button {
+    --border-radius: 8px;
+    --box-shadow: none;
+    margin-top: 10px;
+  
+    &.primary {
+      --background: var(--ion-color-primary);
+      --background-hover: var(--ion-color-primary-tint);
+      --color: white;
+    }
+  
+    &.secondary {
+      --background: var(--ion-color-secondary);
+      --background-hover: var(--ion-color-secondary-tint);
+      --color: white;
+    }
+  
+    &.danger {
+      --background: var(--ion-color-danger);
+      --background-hover: var(--ion-color-danger-tint);
+      --color: white;
+    }
+  }
+  

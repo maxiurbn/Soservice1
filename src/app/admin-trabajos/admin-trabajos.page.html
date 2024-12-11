@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goToAdmin()">
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Administrar Trabajos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let trabajo of trabajos" class="trabajo-item">
+      <ion-label>
+        <h2>Creador: {{ trabajo.creadorNombre }}</h2>
+        <p><strong>Categoría:</strong> {{ trabajo.categoria }}</p>
+        <p><strong>Descripción:</strong> {{ trabajo.descripcionTrabajo }}</p>
+        <p><strong>Estado:</strong> {{ trabajo.estado }}</p>
+        <p><strong>Pago:</strong> {{ trabajo.pago }}</p>
+        <p><strong>Requerimientos:</strong> {{ trabajo.requerimientos }}</p>
+      </ion-label>
+      <ion-buttons slot="end" class="crud-buttons">
+        <ion-button fill="clear" color="tertiary" (click)="showEditModal(trabajo)">
+          Editar
+        </ion-button>
+        <ion-button fill="clear" color="danger" (click)="confirmDelete(trabajo.key)">
+          Eliminar
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+</ion-content>

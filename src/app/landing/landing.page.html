@@ -1,0 +1,47 @@
+<ion-content [fullscreen]="true">
+  
+  <!-- Swiper para las partes del contenido -->
+  <swiper-container
+    slides-per-view="1"
+    space-between="10"
+    pagination="true"
+    (slideChange)="onSlideChange($event)"
+    #swiperContainer
+  >
+    <!-- Primer Slide: Bienvenida -->
+    <swiper-slide>
+      <img src="/assets/logo/SOSERVICE.png" alt="Bienvenida" />
+      <div class="content-slide">
+        <h2>Bienvenido a Soservice</h2>
+        <p>Descubre cómo nuestra plataforma te conecta con personas que necesitan ayuda, ¡todo cerca de ti!</p>
+      </div>
+    </swiper-slide>
+    
+    <!-- Segundo Slide: Publicar tu trabajo -->
+    <swiper-slide>
+      <img src="/assets/logo/SOSERVICE.png" alt="Publica tu trabajo" />
+      <div class="content-slide">
+        <h2>Publica tu trabajo fácilmente</h2>
+        <p>Solo debes publicar lo que necesitas y pronto tendrás respuestas. La forma más rápida de recibir ayuda.</p>
+      </div>
+    </swiper-slide>
+    
+    <!-- Tercer Slide: Genera ingresos -->
+    <swiper-slide>
+      <img src="/assets/logo/SOSERVICE.png" alt="Genera ingresos" />
+      <div class="content-slide">
+        <h2>Genera ingresos Rápido</h2>
+        <p>Trabaja en las publicaciones de otros y genera ingresos de manera flexible, ¡tú decides cuándo y cuánto trabajar!</p>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <!-- Botón "Saltar" que redirige al login -->
+  <button 
+    class="skip-button" 
+    color="secondary" 
+    (click)="goToLogin()">
+    Continuar
+  </button>
+
+</ion-content>

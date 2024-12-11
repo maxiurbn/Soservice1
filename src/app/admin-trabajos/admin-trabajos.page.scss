@@ -1,0 +1,77 @@
+/* Estilo general para el encabezado */
+ion-header {
+    ion-toolbar {
+      background: var(--ion-color-primary);
+      color:  #FF7029;
+  
+      ion-title {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+  
+      ion-buttons {
+        ion-button {
+          --color:  #FF7029;
+  
+          ion-icon {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Estilo del contenido */
+  ion-content {
+    --background: #f9f9f9;
+  
+    /* Lista de trabajos */
+    .trabajo-item {
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: white;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+      ion-label {
+        h2 {
+          font-size: 1rem;
+          color: var(--ion-color-primary);
+          font-weight: bold;
+        }
+  
+        p {
+          font-size: 0.9rem;
+          color: #666;
+          margin: 5px 0;
+        }
+  
+        p strong {
+          color: #333;
+        }
+      }
+  
+      /* Botones CRUD */
+      .crud-buttons {
+        ion-button {
+          margin: 0 5px;
+  
+          &[color="tertiary"] {
+            --background: var(--ion-color-tertiary);
+            --color: white;
+            font-size: 0.9rem;
+            border-radius: 5px;
+          }
+  
+          &[color="danger"] {
+            --background: var(--ion-color-danger);
+            --color: white;
+            font-size: 0.9rem;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+  

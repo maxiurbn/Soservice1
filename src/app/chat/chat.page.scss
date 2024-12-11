@@ -1,0 +1,167 @@
+.fondo{
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  background-image: url('/assets/icon/mensajefondo.jpg'); /* Fondo */
+  background-size: cover;
+  background-position: center;
+}
+.content-transparent {
+  --background: transparent; /* Hace el fondo de ion-content transparente */
+  flex: 1; /* Permite que ion-content ocupe todo el espacio disponible */
+}
+.chat-container {
+  height: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Permite desplazamiento si los mensajes son muchos */
+  background-color: transparent none;
+}
+
+.toolbar-content {
+  display: flex;
+  align-items: center; /* Asegura la alineación vertical */
+  gap: 8px; /* Espaciado horizontal entre elementos */
+}
+
+.back-icon {
+  font-size: 24px; /* Ajusta el tamaño del ícono */
+  color: #000;
+  cursor: pointer; /* Indica que es clickeable */
+}
+
+.foto-perfil {
+  width: 36px; /* Tamaño de la foto */
+  height: 36px;
+  border-radius: 50%; /* Hace la imagen circular */
+  object-fit: cover; /* Asegura que la imagen se recorte correctamente */
+}
+
+ion-title {
+  font-size: 18px; /* Tamaño del texto del título */
+  margin: 0;
+  flex: 1; /* Expande el título para ocupar el espacio sobrante */
+  text-align: center; /* Alinea el texto a la izquierda */
+  font-family: "SF UI Display";
+
+}
+
+
+/* Lista de mensajes */
+.sent-message {
+  display: flex;
+  justify-content: flex-end; /* Alinea la burbuja al lado derecho */
+  margin: 5px 0; /* Espaciado entre mensajes */
+}
+
+.sent-message .message {
+  background-color: #f1f8ff; /* Tono de blanco azulado para mensajes enviados */
+  color: #000; /* Texto en negro para buen contraste */
+  align-self: flex-end; /* Alinear burbujas a la derecha */
+}
+
+
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 70%; /* Ancho máximo de la burbuja */
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  background-color: #e0e0e0; /* Color para la burbuja */
+  padding: 8px 12px; /* Espaciado interno */
+  margin: 5px 0; /* Espaciado entre burbujas */
+  word-wrap: break-word; /* Asegura que las palabras largas se rompan y se ajusten */
+  word-break: break-word; /* Rompe las palabras largas para ajustarlas al espacio */
+}
+
+.message-text {
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  white-space: normal; /* Permite que el texto ocupe más de una línea si es necesario */
+  word-wrap: break-word; /* Ajuste para envolver las palabras */
+  word-break: break-word; /* Rompe palabras largas si es necesario */
+}
+
+.message-timestamp {
+  font-size: 10px;
+  color: #888;
+  align-self: flex-end;
+  margin-top: 4px;
+}
+
+
+
+/* Entrada de chat */
+.chat-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  background-color: transparent;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para la burbuja del input */
+.input-bubble {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  margin-right: 8px;
+}
+
+.chat-input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  background: none;
+  border-radius: 20px;
+  color: #000;
+}
+
+.chat-input:focus {
+  outline: none;
+}
+
+/* Estilo para la burbuja del botón de enviar */
+.send-bubble {
+  background-color: #FF7029; /* Verde de WhatsApp */
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+}
+
+.send-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.send-button ion-icon {
+  color: white !important;
+  margin-left: 4px;
+}
+
+
+.send-button:disabled {
+  background-color: transparent;
+  color: #ccc;
+  cursor: not-allowed;
+}
+

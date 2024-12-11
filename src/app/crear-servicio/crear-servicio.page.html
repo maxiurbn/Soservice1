@@ -1,0 +1,166 @@
+<header>
+  <ion-toolbar *ngIf="currentStep !== 6">
+    <ion-buttons slot="start">
+      <ion-button (click)="prevStep()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <h1>Subir Trabajo</h1>
+    
+    <ion-buttons slot="end">
+      <ion-button (click)="goToHome()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</header>
+
+<ion-content class="container">
+  <form (ngSubmit)="submitForm()">
+    <!-- Paso 1: Seleccionar Categoría -->
+    <div *ngIf="currentStep === 1">
+      <h2 class="titulo">Selecciona la Categoría</h2>
+      <div>
+        <ion-grid [fixed]="true">
+          <div class="category-grid">
+            <div 
+              *ngFor="let categoria of categorias" 
+              class="category-container" 
+              [class.selected]="categoriaSelec === categoria"
+              (click)="selecCategoria(categoria)">
+              <img [src]="categoria.image" />
+              <p class="category-label">{{ categoria.name }}</p>
+            </div>
+          </div>
+        </ion-grid>
+      </div>
+      <div class="footer-btn">
+        <button (click)="nextStep()" class="btn mat-elevation-z3">
+          Siguiente
+        </button>
+      </div>
+    </div>
+
+    <!-- Paso 2: Descripción del Trabajo -->
+    <div *ngIf="currentStep === 2">
+      <h2>Describe el trabajo</h2>
+      <div class="story-input-container">
+        <textarea
+          [(ngModel)]="formData.descripcionTrabajo"
+          name="descripcionTrabajo"
+          placeholder="Escribe algo..."
+          autoGrow="true"
+          class="story-textarea"
+        ></textarea>
+      </div>
+      <div class="footer-btn">
+        <button (click)="nextStep()" class="btn mat-elevation-z3">
+          Siguiente
+        </button>
+      </div>
+    </div>
+
+    <!-- Paso 3: Requisitos -->
+    <div *ngIf="currentStep === 3">
+      <h2>Escribe tus Requisitos</h2>
+      <div class="story-input-container">
+        <textarea
+          [(ngModel)]="formData.requerimientos"
+          name="requerimientos"
+          placeholder="Escribe algo..."
+          autoGrow="true"
+          class="story-textarea"
+        ></textarea>
+      </div>
+      <div class="footer-btn">
+        <button (click)="nextStep()" class="btn mat-elevation-z3">
+          Siguiente
+        </button>
+      </div>
+    </div>
+
+    <!-- Paso 4: foto -->
+    <div *ngIf="currentStep === 4">
+      <h2 style="padding-bottom: 40px;">Toma una Foto</h2>
+
+      <div class="contenedorimg">
+        <!-- Primer contenedor de imagen o icono -->
+        <div class="image-container">
+          <ng-container *ngIf="!formData.imageUrl; else img1">
+            <button class="custom-take-photo-btn" (click)="takePicture(1)">
+              <img src="../../assets/logo/subir.png" alt="Subir Foto" class="icono-boton" />
+            </button>
+          </ng-container>
+          <ng-template #img1>
+            <img [src]="formData.imageUrl" class="preview-image" />
+          </ng-template>
+        </div>
+    
+        <!-- Segundo contenedor de imagen o icono, se muestra solo si imageUrl tiene una imagen -->
+        <div class="image-container" *ngIf="formData.imageUrl">
+          <ng-container *ngIf="!formData.imageUrl2; else img2">
+            <button class="custom-take-photo-btn" (click)="takePicture(2)">
+              <img src="../../assets/logo/subir.png" alt="Subir Foto" class="icono-boton" />
+            </button>
+          </ng-container>
+          <ng-template #img2>
+            <img [src]="formData.imageUrl2" class="preview-image" />
+          </ng-template>
+        </div>
+    
+        <!-- Tercer contenedor de imagen o icono, se muestra solo si imageUrl2 tiene una imagen -->
+        <div class="image-container" *ngIf="formData.imageUrl && formData.imageUrl2">
+          <ng-container *ngIf="!formData.imageUrl3; else img3">
+            <button class="custom-take-photo-btn" (click)="takePicture(3)">
+              <img src="../../assets/logo/subir.png" alt="Subir Foto" class="icono-boton" />
+            </button>
+          </ng-container>
+          <ng-template #img3>
+            <img [src]="formData.imageUrl3" class="preview-image" />
+          </ng-template>
+        </div>
+      </div>
+      
+      <div class="footer-btn">
+        <button (click)="nextStep()" class="btn mat-elevation-z3">
+          Guardar
+        </button>
+      </div>
+    </div>
+   
+    <!-- Paso 5: Pago -->
+    <div *ngIf="currentStep === 5">
+      <h2>Establece tu Presupuesto</h2>
+      <div class="story-input-container">
+        <input
+          type="text"
+          [(ngModel)]="formData.pago"
+          (keydown)="allowOnlyNumbers($event)"
+          (input)="formatPayment($event)"
+          name="pago"
+          placeholder="Establece tu Pago"
+          class="story-textarea"
+        />
+      </div>
+      <div class="footer-btn">
+        <button (click)="nextStep()" class="btn mat-elevation-z3">
+          Confirmar y Subir Solicitud
+        </button>
+      </div>
+    </div>
+
+    <!-- Paso 6: Confirmación -->
+    <div class="confirmacion" *ngIf="currentStep === 6">
+      <div class="confirmacion-content">
+        <img src="../../assets/logo/confirmacion.png" alt="Confirmación" class="confirmacion-img" />
+        <h2 class="confirmacion-title">¡Solicitud Exitosa!</h2>
+        <p class="confirmacion-text">Hemos recibido tu solicitud y será publicada en breve.</p>
+        <div class="footer-btn">
+          <button class="boton-inicio" (click)="goToHome()">Volver al inicio</button>
+        </div>
+      </div>
+    </div>
+    
+  </form>
+</ion-content>

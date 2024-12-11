@@ -1,0 +1,153 @@
+
+ion-content img {
+  max-height: 300px;
+  width: 100%;
+}
+
+p {
+  color: var(--Schemes-Scrim, #000);
+  font-family: "SF UI Display";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 114.286% */
+}
+.parallax {
+  height: 350px; /* Altura de la imagen */
+  background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  transform: translateZ(0); /* Activa el acelerador de hardware */
+  position: relative; /* Permite que el chip se posicione sobre él */
+}
+
+.chip-container {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  left: 20px;
+  margin-top: -90px;
+}
+
+.chip {
+  background-color: #FF7029;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 9px;
+  font-family: "SF UI Display";
+  font-weight: 600;
+
+}
+
+
+.contenido {
+  background-color: #F7F7F9;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  margin-top: -30px; /* Ajusta esto según necesites */
+  padding-top: 20px;
+  position: relative; /* Esto permite que el chip quede fuera */
+  padding: 20px;
+  height: 70vh;
+}
+.contenido h2 {
+  font-family: Geliat-ExtraBold;
+  font-size: 24px;
+  color: #1B1E28;
+}
+
+.usuario {
+  width: 100%;
+  height: 70px;
+  background-color: #D9D9D9;
+  display: flex;
+  align-items: center; /* Centrado vertical */
+  justify-content: start; /* Alinea los elementos hacia la izquierda */
+  border-radius: 15px;
+  padding-left: 10px;
+  gap: 10px; /* Espacio entre la imagen y el texto */
+  text-align: center;
+}
+
+.usuario img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;  /* Hace la imagen redonda */
+  object-fit: cover;  /* Asegura que la imagen no se distorsione */
+}
+
+.usuario h5 {
+  color: var(--Light-Text-Color, #1B1E28);
+  font-family: "SF UI Display";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  margin: 0 auto; /* Centra el texto en el espacio disponible */
+}
+.requeimientos{
+  color: var(--Light-Text-Color, #1B1E28);
+  font-family: "SF UI Display";
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 34px; /* 161.905% */
+}
+
+
+
+
+ion-footer {
+  background-color: #F7F7F9;
+  height: 74px;
+  display: flex;
+  align-items: center; /* Alinea verticalmente el contenido al centro */
+  padding: 0 16px;
+}
+
+ion-footer h2 {
+  color: var(--Light-Text-Color, #1B1E28);
+  font-family: Geliat;
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0; /* Elimina márgenes para mejor alineación */
+}
+
+.contactar {
+  width: 124px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background-color: #FF7029;
+  color: #FFF;
+  text-align: center;
+  font-family: "SF UI Display";
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 44px; /* Centra el texto dentro del botón */
+  margin-left: auto; /* Alinea el botón a la derecha */
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 120px;
+  height: 120px;
+  scroll-snap-align: start;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item ion-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+

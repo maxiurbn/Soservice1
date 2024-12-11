@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goToPerfil()">
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Historial</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="top">
+      <ion-tab-button tab="mis-trabajos">
+        <ion-label>Mis Trabajos</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="mi-carrera">
+        <ion-label>Mi Carrera</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+
+    <!-- Pestaña: Mis Trabajos -->
+    <ion-tab tab="mis-trabajos">
+      <ion-list>
+        <ion-item *ngFor="let trabajo of misTrabajos" (click)="goToDetalleTrabajo(trabajo)">
+          <ion-thumbnail slot="start">
+            <img [src]="trabajo.imageUrl || 'assets/placeholder.png'" alt="Trabajo Imagen 1">
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{ trabajo.descripcionTrabajo }}</h2>
+            <p>Requerimientos: {{ trabajo.requerimientos }}</p>
+            <p>Pago: {{ trabajo.pago }}</p>
+            <p>Estado: {{ trabajo.estado }}</p>
+          </ion-label>
+        </ion-item>
+      
+      </ion-list>
+    </ion-tab>
+
+    <!-- Pestaña: Mi Carrera -->
+    <ion-tab tab="mi-carrera">
+      <ion-list>
+        <ion-item *ngFor="let trabajo of miCarrera" (click)="goToDetalleContrato(trabajo.id)">
+          <ion-thumbnail slot="start">
+            <img [src]="trabajo.imageUrl || 'assets/placeholder.png'" alt="Carrera Imagen 1">
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{ trabajo.descripcionTrabajo }}</h2>
+            <p>Requerimientos: {{ trabajo.requerimientos }}</p>
+            <p>Pago: {{ trabajo.pago }}</p>
+            <p>Estado: {{ trabajo.estado}}</p>
+          </ion-label>
+        </ion-item>
+        
+      </ion-list>
+    </ion-tab>
+  </ion-tabs>
+</ion-content>

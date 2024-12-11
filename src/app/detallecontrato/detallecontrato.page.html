@@ -1,0 +1,74 @@
+<div class="btnbackcontainer">
+  <ion-button fill="clear" (click)="goBack()" class="btnback">
+    <ion-icon class="icono" name="arrow-back"></ion-icon>
+  </ion-button>
+</div>
+
+<ion-content>
+  <h2 class="titulo">Detalles del Trabajo</h2>
+
+  <ion-card *ngIf="trabajoDetalles">
+    <!-- Título y Descripción del Trabajo -->
+    <ion-card-header>
+      <ion-card-title>{{ trabajoDetalles.descripcionTrabajo }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Pago:</strong> {{ trabajoDetalles.pago }}</p>
+      <p><strong>Requerimientos:</strong> {{ trabajoDetalles.requerimientos }}</p>
+      <p><strong>Descripción del Trabajo:</strong> {{ trabajoDetalles.descripcionTrabajo }}</p>
+      <p><strong>Estado:</strong> {{ trabajoDetalles.estado }}</p>
+
+      <!-- Mini Carrusel -->
+      <div class="carousel">
+        <div class="carousel-item" *ngIf="trabajoDetalles.imageUrl">
+          <ion-img [src]="trabajoDetalles.imageUrl"></ion-img>
+        </div>
+        <div class="carousel-item" *ngIf="trabajoDetalles.imageUrl2">
+          <ion-img [src]="trabajoDetalles.imageUrl2"></ion-img>
+        </div>
+        <div class="carousel-item" *ngIf="trabajoDetalles.imageUrl3">
+          <ion-img [src]="trabajoDetalles.imageUrl3"></ion-img>
+        </div>
+      </div>
+
+      <!-- Botón adicional para el creador del trabajo -->
+      <ion-button *ngIf="isCreator && hasWorker" 
+      expand="block" 
+      shape="round" 
+      fill="outline" 
+      size="large" 
+      color="danger" 
+      (click)="showFinalizarTrabajoAlert()">
+Finalizar
+</ion-button>
+
+<ion-button *ngIf="isCreator && !hasWorker" 
+      expand="block" 
+      shape="round" 
+      fill="outline" 
+      size="large" 
+      color="medium" 
+      disabled>
+Sin trabajador
+</ion-button>
+<ion-button *ngIf="isCreator && !hasWorker" 
+            expand="block" 
+            shape="round" 
+            fill="outline" 
+            size="large" 
+            color="danger" 
+            (click)="confirmDeleteTrabajo()">
+  Eliminar trabajo
+</ion-button>
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Mostrar mensaje si no se encuentran los detalles -->
+  <ion-card *ngIf="!trabajoDetalles">
+    <ion-card-content>
+      <p>Cargando detalles del trabajo...</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
